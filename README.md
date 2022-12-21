@@ -11,5 +11,5 @@ Python script to created CSV file with issues together with FixedIn version.
 ## Usage
 
 ```
-python3 list_issues_with_fixedIn_version.py --orgId <Org Id>--projectId <Project ID>
+python3 list_issues_with_fixedIn_version.py --orgId <Org Id> --projectId <Project ID>
 ```
