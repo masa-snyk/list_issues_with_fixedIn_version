@@ -1,6 +1,6 @@
 # list_issues_with_fixedIn_version
 
-Python script to created CSV file with issues together with FixedIn version.
+Python script to create CSV file with issues together with FixedIn version.
 
 ## Prerequisite
 
