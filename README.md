@@ -2,7 +2,7 @@
 
 Python script to created CSV file with issues together with FixedIn version.
 
-## Prerequite
+## Prerequisite
 
 - Python
 - `pip install pysnyk`
