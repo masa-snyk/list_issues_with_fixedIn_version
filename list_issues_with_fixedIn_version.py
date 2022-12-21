@@ -29,9 +29,7 @@ project_id = args.projectId
 client = SnykClient(snyk_token)
 issue_set = client.organizations.get(org_id).projects.get(project_id).issueset_aggregated.all()
 
-
-lst_output = []
-
+# CSV Header
 print("pkgName, pkgVersions, Title, FixedIn")
 
 for v in issue_set.issues:
