@@ -2,6 +2,10 @@
 
 Python script to create CSV file with issues together with FixedIn version.
 
+[2022/12/23] Midification:
+- Skip if `issueType` is not "vuln"
+- Added `Priority score` column
+
 ## Prerequisite
 
 - Python
