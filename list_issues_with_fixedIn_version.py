@@ -30,14 +30,19 @@ client = SnykClient(snyk_token)
 issue_set = client.organizations.get(org_id).projects.get(project_id).issueset_aggregated.all()
 
 # CSV Header
-print("pkgName, pkgVersions, Title, FixedIn")
+print("Priority Score, Package Name, Package Versions, Title, Fixed In version")
 
 for v in issue_set.issues:
-    print('%s, %s, %s, %s' %
-      (
-        v.pkgName,
-        listToString(v.pkgVersions),
-        v.issueData.title, 
-        listToString(v.fixInfo.fixedIn)
-      )
-    )
+    # print(v)  # debug
+
+    # Skip if issueType is not "vuln"
+    if v.issueType == "vuln":
+        print('%s, %s, %s, %s, %s' %
+          (
+            v.priorityScore,
+            v.pkgName,
+            listToString(v.pkgVersions),
+            v.issueData.title, 
+            listToString(v.fixInfo.fixedIn)
+          )
+        )
